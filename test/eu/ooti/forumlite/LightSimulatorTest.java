@@ -19,5 +19,15 @@ public class LightSimulatorTest {
 			System.out.println("hi");
 		}
 	}
+	
+	@Test
+	public void thisOneFails() throws Exception {
+		Screen screen;
+		try(LightSimulator sim = new LightSimulator()) {
+			screen = sim.getScreen();
+			TerminalSize size = screen.getTerminalSize();
+			assertThat(size.getColumns()).isGreaterThan(100);
+		}
+	}
 
 }
