@@ -20,14 +20,17 @@ public class LightSimulatorTest {
 		}
 	}
 	
-	@Test
-	public void thisOneFails() throws Exception {
-		Screen screen;
-		try(LightSimulator sim = new LightSimulator()) {
-			screen = sim.getScreen();
-			TerminalSize size = screen.getTerminalSize();
-			assertThat(size.getColumns()).isGreaterThan(100);
-		}
-	}
+//  The unit test below fails. Uncomment it if you want to see how CircleCI reacts
+//  to a failing test.
+//	
+//	@Test
+//	public void thisOneFails() throws Exception {
+//		Screen screen;
+//		try(LightSimulator sim = new LightSimulator()) {
+//			screen = sim.getScreen();
+//			TerminalSize size = screen.getTerminalSize();
+//			assertThat(size.getColumns()).isGreaterThan(100);
+//		}
+//	}
 
 }

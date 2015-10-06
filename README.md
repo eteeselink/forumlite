@@ -1,18 +1,27 @@
 Forumlite
 =========
 
-To get started, make sure you have this:
+No matter what
+--------------
 
-* Git <https://git-scm.com/>
+* Install Git <https://git-scm.com/>
+* Some people really like to use a Git UI such as <https://www.sourcetreeapp.com/> as well.
+* Git clone the project
+* Make a GitHub account if you don't have one yet. Write your GitHub username on the piece of paper that the teacher has. *Clearly*! :-)
+
+Getting started
+---------------
+
+If you like IDEs, try Eclipse:
+
 * Eclipse <http://www.eclipse.org/downloads/>
 
-OR
+OR if you prefer the command line or are an experience Java geek:
 
 * Git <https://git-scm.com/>
 * [The latest JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (You need version 1.7 or later)
 * [Maven](https://maven.apache.org/install.html)
 
-Some people really like to use a Git UI such as <https://www.sourcetreeapp.com/> as well. 
 
 Using Eclipse
 -------------
