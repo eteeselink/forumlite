@@ -16,7 +16,7 @@ If you like IDEs, try Eclipse:
 
 * Eclipse <http://www.eclipse.org/downloads/>
 
-OR if you prefer the command line or are an experience Java geek:
+OR if you prefer the command line or are an experienced Java geek:
 
 * Git <https://git-scm.com/>
 * [The latest JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (You need version 1.7 or later)
