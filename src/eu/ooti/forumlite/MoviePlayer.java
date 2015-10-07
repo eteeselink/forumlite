@@ -1,5 +1,6 @@
 package eu.ooti.forumlite;
 
+import java.io.IOException;
 import java.util.List;
 
 public class MoviePlayer 
@@ -13,7 +14,7 @@ public class MoviePlayer
 	}
 	
 	
-	public void PlayMovie(String filename)
+	public void PlayMovie(String filename) throws IOException
 	{
 		MovieContents = reader.ReadMovie(filename);
 		//more here soon
