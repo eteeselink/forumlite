@@ -5,7 +5,7 @@ public class StringShower {
 
 
 
-	private int[][] ConvertChar(char c) {
+	public int[][] ConvertChar(char c) {
 		int[][] matrix;
 
 		switch (c){
