@@ -20,6 +20,11 @@ public class LightSimulatorTest {
 		}
 	}
 	
+	@Test
+	public void moo() throws Exception {
+		assertThat(5).isEqualTo(6);
+	}
+	
 //  The unit test below fails. Uncomment it if you want to see how CircleCI reacts
 //  to a failing test.
 //	
