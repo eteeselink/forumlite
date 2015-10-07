@@ -21,6 +21,9 @@ public class LightSimulator implements AutoCloseable {
 		return screen;
 	}
 	
+
+	
+	
 	public void displaySomething(Color foreground) throws InterruptedException {
 		screen.putString(20, 10, "    *   *   *     *   *   *    *   *   *     *   *   *", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 		screen.putString(20, 11, "      * * *         * * *        * * *         * * *  ", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
