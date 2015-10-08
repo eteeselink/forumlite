@@ -141,7 +141,7 @@ public class StringShower {
 				{0, 0, 0, 0, 0},
 				{0, 0, 0, 0, 0}};
 				break;
-		case 'a' :
+		case 'A' :
 			matrix = new int[][] 
 					{{0, 0, 1, 0, 0},
 				{0, 1, 0, 0, 0},

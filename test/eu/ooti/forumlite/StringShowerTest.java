@@ -60,7 +60,7 @@ public class StringShowerTest {
 			{0, 0, 0, 0, 0}});
 	}
 
-	/*@Test
+	@Test
 	public void TestPushChar() throws Exception {
 		StringShower ss = new StringShower();
 
@@ -80,7 +80,7 @@ public class StringShowerTest {
 		ss.PushCharToDisplay('-');
 
 		ss.PushCharToDisplay('1');		
-	}*/
+	}
 
 	@Test
 	public void TestPushString() throws Exception {
@@ -105,7 +105,7 @@ public class StringShowerTest {
 			assertEquals(matrix[0][0], 0);
 			assertEquals(matrix[4][24], 1);
 			
-			matrix = ss.MakeMatrixFromString("a---a");
+			matrix = ss.MakeMatrixFromString("A---A");
 			assertEquals(matrix.length, 5);
 			assertEquals(matrix[0].length, 25);
 			assertEquals(matrix[0][2], 1);
