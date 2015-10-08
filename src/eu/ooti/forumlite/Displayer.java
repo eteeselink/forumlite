@@ -40,20 +40,17 @@ public class Displayer implements AutoCloseable {
 	}
         */
         
-        
-        
-        
-        public void displaySomething(Color foreground) throws InterruptedException {
+        public void displaySomething(int a[][]) throws InterruptedException {
 		
             int i,j;
-            int a[][] = {
+            /*int x[][] = {
 					{1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,0,0,0},
                                         {1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1},
                                         {1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1},
                                         {1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1},
                                         {1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1}
 					
-						};
+						};*/
             
             
             
@@ -67,7 +64,7 @@ public class Displayer implements AutoCloseable {
 					else
 						ch = " ";
                             
-                            screen.putString(20+2*j,10+(i), ch, foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
+                            screen.putString(20+2*j,10+(i), ch, Color.GREEN, Color.BLACK, ScreenCharacterStyle.Blinking);
                             
                             
                     
@@ -75,7 +72,7 @@ public class Displayer implements AutoCloseable {
                         
                         }
                         
-                        screen.putString(20+j,10+(i), " ", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
+                       // screen.putString(20+j,10+(i), " ", foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
                          
             
                        screen.refresh();
