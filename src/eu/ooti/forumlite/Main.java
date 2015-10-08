@@ -30,7 +30,7 @@ public class Main {
 				}
 				if (arguments.getWord() != null) {
 					StringShower stringShower = new StringShower();
-					stringShower.PushCharToDisplay(arguments.getWord().charAt(0));
+					stringShower.PushStringToDisplay(arguments.getWord());
 				}
 			}
 		} catch (InvalidCommandLineException clException) {
