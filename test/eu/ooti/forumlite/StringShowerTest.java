@@ -104,6 +104,12 @@ public class StringShowerTest {
 			assertEquals(matrix[0].length, 25);
 			assertEquals(matrix[0][0], 0);
 			assertEquals(matrix[4][24], 1);
+			
+			matrix = ss.MakeMatrixFromString("A---A");
+			assertEquals(matrix.length, 5);
+			assertEquals(matrix[0].length, 25);
+			assertEquals(matrix[0][2], 1);
+			assertEquals(matrix[4][24], 0);
 		}
 		catch (InvalidParameterException ex) {
 			assertEquals(false, true);

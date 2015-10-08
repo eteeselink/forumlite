@@ -33,7 +33,7 @@ public class StringShower {
 	public void PushStringToDisplay(String s) throws InvalidParameterException {
 		int[][] matrixString = MakeMatrixFromString(s);
 		
-		display.displayString(matrixString);
+		display.display(matrixString);
 	}
 	
 	/**
@@ -67,11 +67,11 @@ public class StringShower {
 	 * @param c The character that needs to be displayed
 	 * @post The character is displayed
 	 */
-	public void PushCharToDisplay(char c) {
+	/*public void PushCharToDisplay(char c) {
 		int[][] lights = this.ConvertChar(c);
 		
 		display.display(lights);
-	}
+	}*/
 
 
 	/**
@@ -141,6 +141,14 @@ public class StringShower {
 				{0, 0, 0, 0, 0},
 				{0, 0, 0, 0, 0}};
 				break;
+		case 'A' :
+			matrix = new int[][] 
+					{{0, 0, 1, 0, 0},
+				{0, 1, 0, 0, 0},
+				{1, 1, 1, 1, 1},
+				{0, 1, 0, 0, 0},
+				{0, 0, 1, 0, 0}};
+				break;
 		default :
 			matrix = new int[][] 
 					{{0, 0, 0, 0, 0},
@@ -148,7 +156,6 @@ public class StringShower {
 				{0, 0, 0, 0, 0},
 				{0, 0, 0, 0, 0},
 				{0, 0, 0, 0, 0}};
-
 		};
 
 		return matrix;

@@ -28,9 +28,13 @@ public class Main {
 					MoviePlayer moviePlayer = new MoviePlayer();
 					moviePlayer.PlayMovie(arguments.getFilename());
 				}
+				if (arguments.isAlarm()) {
+					MoviePlayer moviePlayer = new MoviePlayer();
+					moviePlayer.PlayAlarm();
+				}
 				if (arguments.getWord() != null) {
 					StringShower stringShower = new StringShower();
-					stringShower.PushCharToDisplay(arguments.getWord().charAt(0));
+					stringShower.PushStringToDisplay(arguments.getWord());
 				}
 			}
 		} catch (InvalidCommandLineException clException) {
