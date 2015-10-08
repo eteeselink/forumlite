@@ -141,6 +141,14 @@ public class StringShower {
 				{0, 0, 0, 0, 0},
 				{0, 0, 0, 0, 0}};
 				break;
+		case 'a' :
+			matrix = new int[][] 
+					{{0, 0, 1, 0, 0},
+				{0, 1, 0, 0, 0},
+				{1, 1, 1, 1, 1},
+				{0, 1, 0, 0, 0},
+				{0, 0, 1, 0, 0}};
+				break;
 		default :
 			matrix = new int[][] 
 					{{0, 0, 0, 0, 0},
@@ -148,7 +156,6 @@ public class StringShower {
 				{0, 0, 0, 0, 0},
 				{0, 0, 0, 0, 0},
 				{0, 0, 0, 0, 0}};
-
 		};
 
 		return matrix;
