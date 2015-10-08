@@ -1,32 +1,48 @@
 package eu.ooti.forumlite;
 
 public class Displayer {
-	
-	
-		public static void display (int a[][])
+
+
+	public static void display (int a[][])
+	{
+		for(int i=0;i<5;i++)
 		{
-			for(int i=0;i<5;i++)
+			for(int j=0;j<5;j++)
 			{
-				for(int j=0;j<5;j++)
-				{
-					if(a[i][j] == 1)	
-						System.out.print("*");
-					else
-						System.out.print(" ");
-				}
-				System.out.println("");
-	}
+				if(a[i][j] == 1)		
+					System.out.print("*");
+				else
+					System.out.print(" ");
+			}
+			System.out.println("");
+		}
 	}
 
-		public static void main(String args[])
+	public static void displayString (int a[][])
+	{
+		for(int i=0;i<5;i++)
 		{
-//			int a[][] = {
-//					{1,0,0,1,1},
-//					{1,1,1,1,1},
-//					{0,0,0,0,0},
-//					{1,1,1,1,1},
-//					{1,1,1,1,1},
-//						};
-//		display(a);
+			for(int j=0;j<25;j++)
+			{
+				if(a[i][j] == 1)		
+					System.out.print("*");
+				else
+					System.out.print(" ");
+			}
+			System.out.println("");
 		}
+
+	}
+
+	public static void main(String args[])
+	{
+		int a[][] = {
+				{1,0,0,1,1},
+				{1,1,1,1,1},
+				{0,0,0,0,0},
+				{1,1,1,1,1},
+				{1,1,1,1,1},
+		};
+		display(a);
+	}
 }
