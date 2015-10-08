@@ -60,7 +60,7 @@ public class StringShowerTest {
 			{0, 0, 0, 0, 0}});
 	}
 
-	@Test
+	/*@Test
 	public void TestPushChar() throws Exception {
 		StringShower ss = new StringShower();
 
@@ -80,7 +80,7 @@ public class StringShowerTest {
 		ss.PushCharToDisplay('-');
 
 		ss.PushCharToDisplay('1');		
-	}
+	}*/
 
 	@Test
 	public void TestPushString() throws Exception {

@@ -76,7 +76,7 @@ public class Displayer implements AutoCloseable {
                          
             
                        screen.refresh();
-                        Thread.sleep(2000);
+                        //Thread.sleep(2000);
 		
                 	//screen.clear();
                         screen.refresh();

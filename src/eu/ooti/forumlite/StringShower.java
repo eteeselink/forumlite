@@ -29,11 +29,12 @@ public class StringShower {
 	 * @param s String that needs to be displayed
 	 * @post String is displayed
 	 * @throws InvalidParameterException when parameter s does not contain five characters
+	 * @throws InterruptedException from the display
 	 */	
-	public void PushStringToDisplay(String s) throws InvalidParameterException {
+	public void PushStringToDisplay(String s) throws InvalidParameterException, InterruptedException {
 		int[][] matrixString = MakeMatrixFromString(s);
 		
-		display.display(matrixString);
+		display.displaySomething(matrixString);
 	}
 	
 	/**
