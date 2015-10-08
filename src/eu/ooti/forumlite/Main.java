@@ -7,6 +7,8 @@ import com.github.jankroken.commandline.domain.InvalidOptionConfigurationExcepti
 import com.github.jankroken.commandline.domain.UnrecognizedSwitchException;
 import com.googlecode.lanterna.terminal.Terminal.Color;
 
+import javax.swing.*;
+
 public class Main {
 
 	/**
@@ -32,11 +34,11 @@ public class Main {
 				}
 			}
 		} catch (InvalidCommandLineException clException) {
-			System.out.println("Invalid commandline exception " + clException.getMessage());
+			showErrorDialog("Invalid commandline exception " + clException.getMessage());
 		} catch (InvalidOptionConfigurationException configException) {
-			System.out.println("Invalid commandline exception " + configException.getMessage());
+			showErrorDialog("Invalid option configuration exception " + configException.getMessage());
 		} catch (UnrecognizedSwitchException unrecognizedSwitchException) {
-			System.out.println("Invalid commandline exception " + unrecognizedSwitchException.getMessage());
+			showErrorDialog("Unrecoznized swith exception " + unrecognizedSwitchException.getMessage());
 		}
 		try(LightSimulator sim = new LightSimulator()) {
 			sim.displaySomething(Color.RED);
@@ -45,6 +47,10 @@ public class Main {
 			Thread.sleep(200);
 			sim.displaySomething(Color.YELLOW);
 		}
+	}
+
+	private static void showErrorDialog(String message) {
+		JOptionPane.showMessageDialog(null, message, "Error", JOptionPane.ERROR_MESSAGE);
 	}
 
 }
