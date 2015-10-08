@@ -59,27 +59,27 @@ public class StringShowerTest {
 			{0, 0, 0, 0, 0}});
 	}
 
-	//	@Test
-	//	public void TestPushChar() throws Exception {
-	//		StringShower ss = new StringShower();
-	//		
-	//		ss.PushCharToDisplay('O');
-	//		ss.PushCharToDisplay('O');
-	//
-	//		ss.PushCharToDisplay('o');
-	//
-	//		ss.PushCharToDisplay('.');
-	//
-	//		ss.PushCharToDisplay('\\');
-	//
-	//		ss.PushCharToDisplay('/');
-	//
-	//		ss.PushCharToDisplay('|');
-	//
-	//		ss.PushCharToDisplay('-');
-	//
-	//		ss.PushCharToDisplay('1');		
-	//	}
+	@Test
+	public void TestPushChar() throws Exception {
+		StringShower ss = new StringShower();
+
+		ss.PushCharToDisplay('O');
+		ss.PushCharToDisplay('O');
+
+		ss.PushCharToDisplay('o');
+
+		ss.PushCharToDisplay('.');
+
+		ss.PushCharToDisplay('\\');
+
+		ss.PushCharToDisplay('/');
+
+		ss.PushCharToDisplay('|');
+
+		ss.PushCharToDisplay('-');
+
+		ss.PushCharToDisplay('1');		
+	}
 
 	@Test
 	public void TestPushString() throws Exception {
