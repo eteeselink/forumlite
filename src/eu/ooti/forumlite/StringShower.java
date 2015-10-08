@@ -21,7 +21,7 @@ public class StringShower {
 		this.display = disp;
 	}
 	
-	public void PushStringToDispaly(String s){
+	public void PushStringToDisplay(String s){
 		//String has length of 5, no new line characters
 		
 //		for (int i = 0; i < s.length(); i++) {
