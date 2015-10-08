@@ -1,10 +1,7 @@
 package eu.ooti.forumlite;
 
 
-import com.github.jankroken.commandline.annotations.LongSwitch;
-import com.github.jankroken.commandline.annotations.Option;
-import com.github.jankroken.commandline.annotations.ShortSwitch;
-import com.github.jankroken.commandline.annotations.SingleArgument;
+import com.github.jankroken.commandline.annotations.*;
 
 /**
  * Created by VChembay on 10/8/2015.
@@ -17,6 +14,15 @@ public class Arguments {
 
     private String filename;
     private String word;
+    private boolean alarm = false;
+
+    @Option
+    @LongSwitch("alarm")
+    @ShortSwitch("a")
+    @Toggle(true)
+    public void setDebug(boolean alarm) {
+        this.alarm = alarm;
+    }
 
     @Option
     @LongSwitch("file")
@@ -40,5 +46,9 @@ public class Arguments {
     @SingleArgument
     public void setWord(String word) {
         this.word = word;
+    }
+
+    public boolean isAlarm() {
+        return alarm;
     }
 }

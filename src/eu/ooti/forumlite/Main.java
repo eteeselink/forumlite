@@ -28,6 +28,10 @@ public class Main {
 					MoviePlayer moviePlayer = new MoviePlayer();
 					moviePlayer.PlayMovie(arguments.getFilename());
 				}
+				if (arguments.isAlarm()) {
+					MoviePlayer moviePlayer = new MoviePlayer();
+					moviePlayer.PlayAlarm();
+				}
 				if (arguments.getWord() != null) {
 					StringShower stringShower = new StringShower();
 					stringShower.PushStringToDisplay(arguments.getWord());
