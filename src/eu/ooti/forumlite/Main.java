@@ -21,7 +21,10 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		try {
 			Arguments arguments = CommandLineParser.parse(Arguments.class, args, OptionStyle.SIMPLE);
-			// TODO: use received arguments
+			if (arguments != null && arguments.getFilename() != null) {
+				MoviePlayer moviePlayer = new MoviePlayer();
+				moviePlayer.PlayMovie(arguments.getFilename());
+			}
 		} catch (InvalidCommandLineException clException) {
 			// TODO: implement error handling
 		} catch (InvalidOptionConfigurationException configException) {
