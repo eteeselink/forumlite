@@ -5,7 +5,7 @@ public class StringShower {
 	/**
 	 * The link to the display
 	 */
-	private Displayer display;
+	private static Displayer display;
 
 	public StringShower() {
 		this.display = new Displayer();
@@ -29,7 +29,9 @@ public class StringShower {
 	 * @post The character is displayed
 	 */
 	public void PushCharToDisplay(char c) {
-
+		int[][] lights = this.ConvertChar(c);
+		
+		display.display(lights);
 	}
 
 
