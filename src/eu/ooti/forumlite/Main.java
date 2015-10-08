@@ -40,7 +40,7 @@ public class Main {
 		} catch (UnrecognizedSwitchException unrecognizedSwitchException) {
 			showErrorDialog("Unrecoznized swith exception " + unrecognizedSwitchException.getMessage());
 		}
-		try(LightSimulator sim = new LightSimulator()) {
+		try(Displayer sim = new Displayer()) {
 			sim.displaySomething(Color.RED);
 			Thread.sleep(200);
 			sim.displaySomething(Color.GREEN);
