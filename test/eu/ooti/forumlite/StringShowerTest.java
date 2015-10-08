@@ -1,6 +1,7 @@
 package eu.ooti.forumlite;
 
 import static org.junit.Assert.*;
+import java.security.InvalidParameterException;
 
 import org.junit.Test;
 
@@ -85,5 +86,20 @@ public class StringShowerTest {
 	public void TestPushString() throws Exception {
 		StringShower ss = new StringShower();
 		ss.PushStringToDisplay("OoooO");
+		
+		try {
+			ss.PushStringToDisplay("Oo..oO");
+		}
+		catch (InvalidParameterException ex) {
+			assertEquals(true, true);
+		}
+		
+		try {
+			ss.PushStringToDisplay("OooO");
+		}
+		catch (InvalidParameterException ex) {
+			assertEquals(true, true);
+		}
 	}
+	
 }
