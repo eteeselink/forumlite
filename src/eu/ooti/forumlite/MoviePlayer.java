@@ -6,7 +6,7 @@ import java.util.List;
 public class MoviePlayer 
 {
 	MovieReader reader;
-	List MovieContents;
+	List<String> MovieContents;
 	
 	public MoviePlayer()
 	{
