@@ -23,7 +23,7 @@ public class MovieReaderTest
 		List<String> contents;
 		try(MovieReader mr = new MovieReader())
 		{
-			assertThat(mr.ReadMovie("movie.txt").size()).isEqualTo(6);
+			assertThat(mr.ReadMovie("movie.txt").size()).isEqualTo(7);
 			System.out.println("hello");
 		}
 	}
