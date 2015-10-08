@@ -1,48 +1,101 @@
 package eu.ooti.forumlite;
 
-public class Displayer {
+import com.googlecode.lanterna.TerminalFacade;
+import com.googlecode.lanterna.screen.Screen;
+import com.googlecode.lanterna.screen.ScreenCharacterStyle;
+import com.googlecode.lanterna.terminal.Terminal.Color;
 
+public class Displayer implements AutoCloseable {
+	private static Screen screen;
+	
+	//public LightSimulator() {
+	//	screen = TerminalFacade.createScreen();
+	//	screen.startScreen();
+	//}
 
-	public static void display (int a[][])
-	{
-		for(int i=0;i<5;i++)
+	public Displayer() {
+		screen = TerminalFacade.createScreen();
+		screen.startScreen();
+	}	
+	
+	public void close() throws Exception {
+		screen.stopScreen();
+	}
+	
+	public Screen getScreen() {
+		return screen;
+	}
+	
+
+	
+	
+	
+		public static void display (int a[][])
 		{
-			for(int j=0;j<5;j++)
+			
+			int[][] displayMatrix = new int[5][43];
+
+			
+			for(int i=0;i<5;i++)
 			{
-				if(a[i][j] == 1)		
-					System.out.print("*");
-				else
-					System.out.print(" ");
+				for(int j=0;j<4;j++)
+				{
+					displayMatrix[i][j] = 0;
+				}
+				for(int j=4;j<9;j++)
+				{
+					displayMatrix[i][j] = a[i][j-4];
+				}
+				for(int j=9;j<14;j++)
+				{
+					displayMatrix[i][j] = 0;
+				}
+				for(int j=14;j<19;j++)
+				{
+					displayMatrix[i][j] = a[i][j-9];
+				}
+				for(int j=19;j<22;j++)
+				{
+					displayMatrix[i][j] = 0;
+				}
+				for(int j=22;j<27;j++)
+				{
+					displayMatrix[i][j] = a[i][j-13];
+				}
+				for(int j=27;j<38;j++)
+				{
+					displayMatrix[i][j] = 0;
+				}
+				for(int j=38;j<43;j++)
+				{
+					displayMatrix[i][j] = a[i][j-18];
+				}
 			}
-			System.out.println("");
-		}
-	}
-
-	public static void displayString (int a[][])
-	{
-		for(int i=0;i<5;i++)
-		{
-			for(int j=0;j<25;j++)
+			
+			for(int i=0;i<5;i++)
 			{
-				if(a[i][j] == 1)		
-					System.out.print("*");
-				else
-					System.out.print(" ");
+				for(int j=0;j<43;j++)
+				{
+					if(a[i][j] == 1)	
+						screen.putString(20, 10+i, "*", Color.RED, Color.BLACK, ScreenCharacterStyle.Blinking);
+					else
+						screen.putString(20, 10+i, " ", Color.RED, Color.BLACK, ScreenCharacterStyle.Blinking);
+				}
+				
 			}
-			System.out.println("");
-		}
-
+			
+			
+			screen.refresh();
+			try {
+				Thread.sleep(2000);
+				
+			} catch (InterruptedException e) {
+				
+			}
+		
+			
+			screen.clear();
+			screen.refresh();
 	}
 
-	public static void main(String args[])
-	{
-		int a[][] = {
-				{1,0,0,1,1},
-				{1,1,1,1,1},
-				{0,0,0,0,0},
-				{1,1,1,1,1},
-				{1,1,1,1,1},
-		};
-		display(a);
-	}
 }
