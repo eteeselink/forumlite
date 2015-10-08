@@ -41,7 +41,7 @@ public class StringShower {
 			int charMatrix[][] = ConvertChar(s.charAt(c));
 			for (int i = 0; i < 5; i++) {
 				for (int j = 0; j < 5; j++) {
-					matrixString[i][c*5+j] = charMatrix[i][j];
+					matrixString[i][c * 5 + j] = charMatrix[i][j];
 				}
 			}
 		}	
