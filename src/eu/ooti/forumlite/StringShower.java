@@ -2,12 +2,19 @@ package eu.ooti.forumlite;
 
 import java.security.InvalidParameterException;
 
+import com.googlecode.lanterna.terminal.Terminal.Color;
+
 public class StringShower {
 	
 	/**
 	 * The link to the display
 	 */
 	private static Displayer display;
+	
+	/**
+	 * Denotes the default color of the display
+	 */
+	private Color defaultColor = Color.WHITE;
 
 	public StringShower() {
 		this.display = new Displayer();
@@ -34,7 +41,7 @@ public class StringShower {
 	public void PushStringToDisplay(String s) throws InvalidParameterException, InterruptedException {
 		int[][] matrixString = MakeMatrixFromString(s);
 		
-		display.displaySomething(matrixString);
+		display.displaySomething(matrixString, defaultColor);
 	}
 	
 	/**

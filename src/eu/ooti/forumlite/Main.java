@@ -45,11 +45,19 @@ public class Main {
 			showErrorDialog("Unrecoznized swith exception " + unrecognizedSwitchException.getMessage());
 		}
 		try(Displayer sim = new Displayer()) {
-			/*sim.displaySomething(Color.RED);
+			int x[][] = {
+			{1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,0,0,0},
+                                {1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1},
+                                {1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1},
+                                {1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1},
+                                {1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1}
+			
+				};
+			sim.displaySomething(x, Color.RED);
 			Thread.sleep(200);
-			sim.displaySomething(Color.GREEN);
+			sim.displaySomething(x, Color.GREEN);
 			Thread.sleep(200);
-			sim.displaySomething(Color.YELLOW);*/
+			sim.displaySomething(x, Color.YELLOW);
 		}
 	}
 
