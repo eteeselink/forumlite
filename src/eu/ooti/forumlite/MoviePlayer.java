@@ -18,6 +18,10 @@ public class MoviePlayer
 	{
 		MovieContents = reader.ReadMovie(filename);
 		//more here soon
+		for(String item : MovieContents)
+		{
+			//send movie's contents to the StringShower
+		}
 	}
 	
 
