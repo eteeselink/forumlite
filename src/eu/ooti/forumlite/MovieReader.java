@@ -9,22 +9,24 @@ import java.util.List;
 
 public class MovieReader 
 {
-	List movie;
+	List<String> movie;
 	
 	public MovieReader()
 	{
-		movie = new ArrayList();
+		movie = new ArrayList<String>();
 	}
-	public List ReadMovie(String filename) throws IOException
+	
+	public List<String> ReadMovie(String filename) throws IOException
 	{
 		//reading file here
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		try {
 		    String line = br.readLine();
 
-		    while (line != null) {
+		    while (line != null && line != "") {
 		        movie.add(line);
 		        line = br.readLine();
+		        
 		    };
 		} finally {
 		    br.close();

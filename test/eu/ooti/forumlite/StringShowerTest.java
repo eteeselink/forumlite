@@ -58,4 +58,11 @@ public class StringShowerTest {
 			{0, 0, 0, 0, 0},
 			{0, 0, 0, 0, 0}});
 	}
+	
+	@Test
+	public void TestPushChar() throws Exception {
+		StringShower ss = new StringShower();
+		
+		ss.PushCharToDisplay('O');
+	}
 }

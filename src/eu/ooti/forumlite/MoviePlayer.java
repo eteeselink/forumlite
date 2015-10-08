@@ -6,7 +6,7 @@ import java.util.List;
 public class MoviePlayer 
 {
 	MovieReader reader;
-	List MovieContents;
+	List<String> MovieContents;
 	
 	public MoviePlayer()
 	{
@@ -18,6 +18,10 @@ public class MoviePlayer
 	{
 		MovieContents = reader.ReadMovie(filename);
 		//more here soon
+		for(String item : MovieContents)
+		{
+			//send movie's contents to the StringShower
+		}
 	}
 	
 
