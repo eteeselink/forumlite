@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MovieReader 
+public class MovieReader implements AutoCloseable
 {
-	List<String> movie;
+	private List<String> movie;
 	
 	public MovieReader()
 	{
@@ -32,6 +32,12 @@ public class MovieReader
 		    br.close();
 		}
 		return movie;
+	}
+
+	@Override
+	public void close() throws Exception {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

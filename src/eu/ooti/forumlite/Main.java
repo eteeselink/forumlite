@@ -7,6 +7,8 @@ import com.github.jankroken.commandline.domain.InvalidOptionConfigurationExcepti
 import com.github.jankroken.commandline.domain.UnrecognizedSwitchException;
 import com.googlecode.lanterna.terminal.Terminal.Color;
 
+import javax.swing.*;
+
 public class Main {
 
 	/**
@@ -21,13 +23,22 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		try {
 			Arguments arguments = CommandLineParser.parse(Arguments.class, args, OptionStyle.SIMPLE);
-			// TODO: use received arguments
+			if (arguments != null) {
+				if (arguments.getFilename() != null) {
+					MoviePlayer moviePlayer = new MoviePlayer();
+					moviePlayer.PlayMovie(arguments.getFilename());
+				}
+				if (arguments.getWord() != null) {
+					StringShower stringShower = new StringShower();
+					stringShower.PushCharToDisplay(arguments.getWord().charAt(0));
+				}
+			}
 		} catch (InvalidCommandLineException clException) {
-			// TODO: implement error handling
+			showErrorDialog("Invalid commandline exception " + clException.getMessage());
 		} catch (InvalidOptionConfigurationException configException) {
-			// TODO: implement error handling
+			showErrorDialog("Invalid option configuration exception " + configException.getMessage());
 		} catch (UnrecognizedSwitchException unrecognizedSwitchException) {
-			// TODO: implement error handling
+			showErrorDialog("Unrecoznized swith exception " + unrecognizedSwitchException.getMessage());
 		}
 		try(LightSimulator sim = new LightSimulator()) {
 			sim.displaySomething(Color.RED);
@@ -36,6 +47,10 @@ public class Main {
 			Thread.sleep(200);
 			sim.displaySomething(Color.YELLOW);
 		}
+	}
+
+	private static void showErrorDialog(String message) {
+		JOptionPane.showMessageDialog(null, message, "Error", JOptionPane.ERROR_MESSAGE);
 	}
 
 }
