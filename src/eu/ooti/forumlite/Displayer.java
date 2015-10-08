@@ -77,9 +77,9 @@ public class Displayer implements AutoCloseable {
 				for(int j=0;j<43;j++)
 				{
 					if(a[i][j] == 1)	
-						screen.putString(20, 10+i, "*", Color.RED, Color.BLACK, ScreenCharacterStyle.Blinking);
+						screen.putString(20+j, 10+i, "*", Color.RED, Color.BLACK, ScreenCharacterStyle.Blinking);
 					else
-						screen.putString(20, 10+i, " ", Color.RED, Color.BLACK, ScreenCharacterStyle.Blinking);
+						screen.putString(20+j, 10+i, " ", Color.RED, Color.BLACK, ScreenCharacterStyle.Blinking);
 				}
 				
 			}
