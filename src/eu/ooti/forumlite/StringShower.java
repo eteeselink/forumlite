@@ -1,5 +1,7 @@
 package eu.ooti.forumlite;
 
+import java.security.InvalidParameterException;
+
 public class StringShower {
 	
 	/**
@@ -21,16 +23,20 @@ public class StringShower {
 		this.display = disp;
 	}
 	
-	public void PushStringToDisplay(String s){
-		/**
-		 * Displays string with maximum 5 characters on the display
-		 * 
-		 * @param s String that needs to be displayed
-		 * @post String is displayed
-		 */
+	/**
+	 * Displays string with maximum 5 characters on the display
+	 * 
+	 * @param s String that needs to be displayed
+	 * @post String is displayed
+	 * @throws InvalidParameterException when parameter s does not contain five characters
+	 */	
+	public void PushStringToDisplay(String s) throws InvalidParameterException {
+		if (s.length() != 5) {
+			throw new InvalidParameterException("String should contain five characters");
+		}
 		
 		int matrixString [][] = new int [5][25];
-			
+		
 		for (int c = 0; c < s.length(); c++) {
 			int charMatrix[][] = ConvertChar(s.charAt(c));
 			for (int i = 0; i < 5; i++) {
@@ -38,7 +44,8 @@ public class StringShower {
 					matrixString[i][c*5+j] = charMatrix[i][j];
 				}
 			}
-		}		
+		}	
+		
 		display.displayString(matrixString);
 	}
 	
