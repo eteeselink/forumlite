@@ -20,7 +20,14 @@ public class StringShower {
 	public StringShower(Displayer disp) {
 		this.display = disp;
 	}
-
+	
+	public void PushStringToDisplay(String s){
+		//String has length of 5, no new line characters
+		
+//		for (int i = 0; i < s.length(); i++) {
+//			PushCharToDisplay(s.charAt(i));
+//		}
+	}
 
 	/**
 	 * Displays a single character on the display
