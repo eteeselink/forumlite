@@ -31,6 +31,19 @@ public class StringShower {
 	 * @throws InvalidParameterException when parameter s does not contain five characters
 	 */	
 	public void PushStringToDisplay(String s) throws InvalidParameterException {
+		int[][] matrixString = MakeMatrixFromString(s);
+		
+		display.displayString(matrixString);
+	}
+	
+	/**
+	 * Creates the matrix that represents the string
+	 * 
+	 * @param s The string
+	 * @return The array with the lights configuration
+	 * @throws InvalidParamterFunction when the size of the string is not five
+	 */
+	public int[][] MakeMatrixFromString(String s) throws InvalidParameterException {
 		if (s.length() != 5) {
 			throw new InvalidParameterException("String should contain five characters");
 		}
@@ -44,9 +57,8 @@ public class StringShower {
 					matrixString[i][c*5+j] = charMatrix[i][j];
 				}
 			}
-		}	
-		
-		display.displayString(matrixString);
+		}
+		return matrixString;
 	}
 	
 	/**
