@@ -10,6 +10,16 @@ public class StringShower {
 	public StringShower() {
 		this.display = new Displayer();
 	}
+	
+	/**
+	 * Constructor that is used when the display is already known.
+	 * This can be used for automated testing. 
+	 *  
+	 * @param disp The display
+	 */
+	public StringShower(Displayer disp) {
+		this.display = disp;
+	}
 
 
 	/**
