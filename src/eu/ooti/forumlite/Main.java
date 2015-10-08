@@ -21,16 +21,22 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 		try {
 			Arguments arguments = CommandLineParser.parse(Arguments.class, args, OptionStyle.SIMPLE);
-			if (arguments != null && arguments.getFilename() != null) {
-				MoviePlayer moviePlayer = new MoviePlayer();
-				moviePlayer.PlayMovie(arguments.getFilename());
+			if (arguments != null) {
+				if (arguments.getFilename() != null) {
+					MoviePlayer moviePlayer = new MoviePlayer();
+					moviePlayer.PlayMovie(arguments.getFilename());
+				}
+				if (arguments.getWord() != null) {
+					StringShower stringShower = new StringShower();
+					stringShower.PushCharToDisplay(arguments.getWord().charAt(0));
+				}
 			}
 		} catch (InvalidCommandLineException clException) {
-			// TODO: implement error handling
+			System.out.println("Invalid commandline exception " + clException.getMessage());
 		} catch (InvalidOptionConfigurationException configException) {
-			// TODO: implement error handling
+			System.out.println("Invalid commandline exception " + configException.getMessage());
 		} catch (UnrecognizedSwitchException unrecognizedSwitchException) {
-			// TODO: implement error handling
+			System.out.println("Invalid commandline exception " + unrecognizedSwitchException.getMessage());
 		}
 		try(LightSimulator sim = new LightSimulator()) {
 			sim.displaySomething(Color.RED);
