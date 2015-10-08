@@ -22,12 +22,15 @@ public class StringShower {
 	}
 	
 	public void PushStringToDisplay(String s){
-		//String has length of 5, no new line characters
+		/**
+		 * Displays string with maximum 5 characters on the display
+		 * 
+		 * @param s String that needs to be displayed
+		 * @post String is displayed
+		 */
 		
 		int matrixString [][] = new int [5][25];
-		
-//		matrixString[0] = addAll(PushCharToDisplay(s.charAt(i));
-		
+			
 		for (int c = 0; c < s.length(); c++) {
 			int charMatrix[][] = ConvertChar(s.charAt(c));
 			for (int i = 0; i < 5; i++) {
@@ -36,7 +39,7 @@ public class StringShower {
 				}
 			}
 		}		
-		display.display(matrixString);
+		display.displayString(matrixString);
 	}
 	
 	/**
