@@ -169,4 +169,9 @@ public class StringShower {
 		return matrix;
 
 	}
+	
+	
+	public void setColor(Color c) {
+		defaultColor = c;
+	}
 }
