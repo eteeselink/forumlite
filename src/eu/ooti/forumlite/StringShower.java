@@ -4,7 +4,24 @@ public class StringShower {
 
 
 
+	/**
+	 * Displays a single character on the display
+	 * 
+	 * @param c The character that needs to be displayed
+	 * @post The character is displayed
+	 */
+	public void PushCharToDisplay(char c) {
 
+	}
+
+
+	/**
+	 * Converts the character into the corresponding light
+	 * 
+	 * @param c The character that needs to be converted
+	 * @return A 5 by 5 matrix that indicates whether a light should be on (1) or off (0).
+	 * Note that when the character is invalid all lights are off. 
+	 */
 	public int[][] ConvertChar(char c) {
 		int[][] matrix;
 
