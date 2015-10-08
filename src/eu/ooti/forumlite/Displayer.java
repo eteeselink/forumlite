@@ -1,5 +1,6 @@
 package eu.ooti.forumlite;
 
+<<<<<<< HEAD
 import com.googlecode.lanterna.TerminalFacade;
 import com.googlecode.lanterna.screen.Screen;
 import com.googlecode.lanterna.screen.ScreenCharacterStyle;
@@ -20,9 +21,28 @@ public class Displayer implements AutoCloseable {
 	
 	public Screen getScreen() {
 		return screen;
+=======
+public class Displayer {
+
+
+	public static void display (int a[][])
+	{
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<5;j++)
+			{
+				if(a[i][j] == 1)		
+					System.out.print("*");
+				else
+					System.out.print(" ");
+			}
+			System.out.println("");
+		}
+>>>>>>> 17df66b6dcf9f970386f2a231fe2563aa244d910
 	}
 	
 
+<<<<<<< HEAD
 	
 	
 	
@@ -88,3 +108,33 @@ public class Displayer implements AutoCloseable {
 	}
         }
 }
+=======
+	public static void displayString (int a[][])
+	{
+		for(int i=0;i<5;i++)
+		{
+			for(int j=0;j<25;j++)
+			{
+				if(a[i][j] == 1)		
+					System.out.print("*");
+				else
+					System.out.print(" ");
+			}
+			System.out.println("");
+		}
+
+	}
+
+	public static void main(String args[])
+	{
+		int a[][] = {
+				{1,0,0,1,1},
+				{1,1,1,1,1},
+				{0,0,0,0,0},
+				{1,1,1,1,1},
+				{1,1,1,1,1},
+		};
+		display(a);
+	}
+}
+>>>>>>> 17df66b6dcf9f970386f2a231fe2563aa244d910
