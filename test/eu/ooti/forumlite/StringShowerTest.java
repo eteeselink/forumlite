@@ -59,10 +59,17 @@ public class StringShowerTest {
 			{0, 0, 0, 0, 0}});
 	}
 	
+//	@Test
+//	public void TestPushChar() throws Exception {
+//		StringShower ss = new StringShower();
+//		
+//		ss.PushCharToDisplay('O');
+//	}
+	
 	@Test
-	public void TestPushChar() throws Exception {
+	public void TestPushString() throws Exception {
 		StringShower ss = new StringShower();
 		
-		ss.PushCharToDisplay('O');
+		ss.PushStringToDisplay("OoooO");
 	}
 }

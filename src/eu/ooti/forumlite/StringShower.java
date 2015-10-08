@@ -24,11 +24,21 @@ public class StringShower {
 	public void PushStringToDisplay(String s){
 		//String has length of 5, no new line characters
 		
-//		for (int i = 0; i < s.length(); i++) {
-//			PushCharToDisplay(s.charAt(i));
-//		}
+		int matrixString [][] = new int [5][25];
+		
+//		matrixString[0] = addAll(PushCharToDisplay(s.charAt(i));
+		
+		for (int c = 0; c < s.length(); c++) {
+			int charMatrix[][] = ConvertChar(s.charAt(c));
+			for (int i = 0; i < 5; i++) {
+				for (int j = 0; j < 5; j++) {
+					matrixString[i][c*5+j] = charMatrix[i][j];
+				}
+			}
+		}		
+		display.display(matrixString);
 	}
-
+	
 	/**
 	 * Displays a single character on the display
 	 * 
