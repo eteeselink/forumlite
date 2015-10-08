@@ -54,7 +54,7 @@ public class Displayer implements AutoCloseable {
 					ch = " ";
 
 				// screen.putString(20+2*j,10+(i), ch, Color.GREEN, Color.BLACK, ScreenCharacterStyle.Blinking);
-				screen.putString(20+j,10+(i), ch, foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
+				screen.putString(20+2*j,10+(i), ch, foreground, Color.BLACK, ScreenCharacterStyle.Blinking);
 			}                         
 
 			screen.refresh();
