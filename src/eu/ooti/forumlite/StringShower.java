@@ -1,7 +1,15 @@
 package eu.ooti.forumlite;
 
 public class StringShower {
+	
+	/**
+	 * The link to the display
+	 */
+	private Displayer display;
 
+	public StringShower() {
+		this.display = new Displayer();
+	}
 
 
 	/**

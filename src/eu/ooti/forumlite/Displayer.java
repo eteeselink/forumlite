@@ -1,6 +1,6 @@
 package eu.ooti.forumlite;
 
-public class displayer {
+public class Displayer {
 	
 	
 		public static void display (int a[][])
